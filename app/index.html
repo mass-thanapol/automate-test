@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form Validation Example</title>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #f9f9f9;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Form Validation Example</h1>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label>
+    <br>
+    <label for="subject">Subject:</label>
+    <select id="subject" name="subject" required>
+      <option value="" disabled selected>Select Subject</option>
+      <option value="math">Math</option>
+      <option value="art">Art</option>
+      <option value="others">Others</option>
+    </select>
+    <br>
+    <label>Favorite:</label>
+    <input type="checkbox" id="football" name="favorite" value="football">
+    <label for="football">Football</label>
+    <input type="checkbox" id="tennis" name="favorite" value="tennis">
+    <label for="tennis">Tennis</label>
+    <input type="checkbox" id="walking" name="favorite" value="walking">
+    <label for="walking">Walking</label>
+    <br>
+    <input type="submit" id="submit" value="Submit">
+  </form>
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <p>Success! All fields are filled.</p>
+    </div>
+  </div>
+  <div class="modal" id="failureModal">
+    <div class="modal-content">
+      <p>Fail! Please fill all fields.</p>
+    </div>
+  </div>
+  <script>
+    const form = document.getElementById("myForm");
+    const successModal = document.getElementById("successModal");
+    const failureModal = document.getElementById("failureModal");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const gender = document.querySelector("input[name='gender']:checked");
+      const favorite = document.querySelectorAll("input[name='favorite']:checked");
+      const subject = document.getElementById("subject").value;
+      if (name && gender && favorite.length > 0 && subject) {
+        successModal.style.display = "block";
+        form.reset();
+        setTimeout(function () {
+          successModal.style.display = "none";
+        }, 3000);
+      } else {
+        failureModal.style.display = "block";
+        setTimeout(function () {
+          failureModal.style.display = "none";
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+
+</html>

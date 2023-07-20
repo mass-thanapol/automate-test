@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.11 on win32)" generated="20230720 15:39:48.934" rpa="false" schemaversion="3">
+<suite id="s1" name="Test-Case-1" source="D:\Project\ProjectAutomateTest\case\test-case-1.robot">
+<test id="s1-t1" name="Open App Case" line="31">
+<kw name="Open App">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230720 15:39:49.338" level="INFO">Opening browser 'Chrome' to base url 'file:///D:/Project/ProjectAutomateTest/app/index.html'.</msg>
+<msg timestamp="20230720 15:39:49.381" level="INFO">Executing: C:\Users\Mass\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230720 15:39:49.336" endtime="20230720 15:39:51.612"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:49.336" endtime="20230720 15:39:51.612"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>01-open-app-case-success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230720 15:39:52.007" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="01-open-app-case-success.png"&gt;&lt;img src="01-open-app-case-success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230720 15:39:51.619" endtime="20230720 15:39:52.007"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:49.334" endtime="20230720 15:39:52.007"/>
+</test>
+<test id="s1-t2" name="Fill Name Case" line="35">
+<kw name="Fill Name">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=name</arg>
+<arg>John Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230720 15:39:52.016" level="INFO">Typing text 'John Doe' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20230720 15:39:52.015" endtime="20230720 15:39:52.187"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.014" endtime="20230720 15:39:52.187"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>02-fill-name-case-success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230720 15:39:52.302" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="02-fill-name-case-success.png"&gt;&lt;img src="02-fill-name-case-success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230720 15:39:52.187" endtime="20230720 15:39:52.302"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.013" endtime="20230720 15:39:52.302"/>
+</test>
+<test id="s1-t3" name="Fill Gender Case" line="39">
+<kw name="Fill Gender">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=male</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 15:39:52.320" level="INFO">Clicking element 'id=male'.</msg>
+<status status="PASS" starttime="20230720 15:39:52.319" endtime="20230720 15:39:52.412"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.318" endtime="20230720 15:39:52.412"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>03-fill-gender-case-success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230720 15:39:52.540" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="03-fill-gender-case-success.png"&gt;&lt;img src="03-fill-gender-case-success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230720 15:39:52.413" endtime="20230720 15:39:52.540"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.317" endtime="20230720 15:39:52.540"/>
+</test>
+<test id="s1-t4" name="Fill Subject Case" line="43">
+<kw name="Fill Subject">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>id=subject</arg>
+<arg>math</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230720 15:39:52.551" level="INFO">Selecting options from selection list 'id=subject' by value math.</msg>
+<status status="PASS" starttime="20230720 15:39:52.550" endtime="20230720 15:39:52.663"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.550" endtime="20230720 15:39:52.663"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>04-fill-subject-case-success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230720 15:39:52.789" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="04-fill-subject-case-success.png"&gt;&lt;img src="04-fill-subject-case-success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230720 15:39:52.663" endtime="20230720 15:39:52.789"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.549" endtime="20230720 15:39:52.789"/>
+</test>
+<test id="s1-t5" name="Fill Favorite Case" line="47">
+<kw name="Fill Favorite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=football</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 15:39:52.808" level="INFO">Clicking element 'id=football'.</msg>
+<status status="PASS" starttime="20230720 15:39:52.807" endtime="20230720 15:39:52.884"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=tennis</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 15:39:52.886" level="INFO">Clicking element 'id=tennis'.</msg>
+<status status="PASS" starttime="20230720 15:39:52.885" endtime="20230720 15:39:52.947"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.806" endtime="20230720 15:39:52.947"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>05-fill-favorite-case-success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230720 15:39:53.073" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="05-fill-favorite-case-success.png"&gt;&lt;img src="05-fill-favorite-case-success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230720 15:39:52.947" endtime="20230720 15:39:53.073"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:52.805" endtime="20230720 15:39:53.073"/>
+</test>
+<test id="s1-t6" name="Submit Case" line="51">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 15:39:53.091" level="INFO">Clicking element 'css=input[type='submit']'.</msg>
+<status status="PASS" starttime="20230720 15:39:53.089" endtime="20230720 15:39:53.170"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Success! All fields are filled.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230720 15:39:53.171" endtime="20230720 15:39:53.201"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>06-submit-case-success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230720 15:39:53.333" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="06-submit-case-success.png"&gt;&lt;img src="06-submit-case-success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230720 15:39:53.201" endtime="20230720 15:39:53.333"/>
+</kw>
+<status status="PASS" starttime="20230720 15:39:53.088" endtime="20230720 15:39:53.333"/>
+</test>
+<doc>Test: Fill and Submit Form</doc>
+<status status="PASS" starttime="20230720 15:39:48.934" endtime="20230720 15:39:53.339"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Test-Case-1">Test-Case-1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
