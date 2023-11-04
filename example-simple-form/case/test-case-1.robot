@@ -5,7 +5,7 @@ Library             Screenshot
 Library             SeleniumLibrary
 
 *** Variables ***
-${URL}          file:///D:/Project/ProjectAutomateTest/app/index.html
+${URL}          file:///D:/Project/ProjectAutomateTest/example-simple-form/app/index.html
 ${BROWSER}      Chrome
 
 
