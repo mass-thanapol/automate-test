@@ -1,0 +1,7 @@
+robotframework==6.1.1
+robotframework-browser==15.0.0
+robotframework-requests==0.9.5
+robotframework-assertion-engine==1.0.0
+
+Flask==3.0.0
+Flask-Cors==4.0.0

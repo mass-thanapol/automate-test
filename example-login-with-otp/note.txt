@@ -1,0 +1,12 @@
+cd automated-test
+    robot --outputdir ./output ./LoginWithOTPBrowser.robot
+
+cd back-end
+    python3 main.py
+
+fix robotframework-browser
+    rfbrowser init
+
+https://pypi.org/project/robotframework-browser/
+https://robotframework-browser.org/
+https://marketsquare.github.io/robotframework-browser/Browser.html

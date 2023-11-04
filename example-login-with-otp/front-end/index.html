@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Page Application</title>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page">
+        <h1>Login Page</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit" id="login-btn">Login</button>
+        </form>
+    </div>
+
+    <!-- OTP Verification Page -->
+    <div id="otp-page" style="display: none;">
+        <h1>OTP Verification Page</h1>
+        <form id="otp-form">
+            <input type="text" id="otp" placeholder="Enter OTP">
+            <button type="submit" id="otp-verify-btn">Verify OTP</button>
+        </form>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" style="display: none;">
+        <h1>Hello!!!</h1>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginPage = document.getElementById("login-page");
+            const otpPage = document.getElementById("otp-page");
+            const homePage = document.getElementById("home-page");
+            const loginForm = document.getElementById("login-form");
+            const usernameInput = document.getElementById("username");
+            const passwordInput = document.getElementById("password");
+            const otpForm = document.getElementById("otp-form");
+            const otpInput = document.getElementById("otp");
+            loginForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const username = usernameInput.value;
+                const password = passwordInput.value;
+                const requestData = {
+                    username: username,
+                    password: password
+                };
+                fetch('http://127.0.0.1:5000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                })
+                .then(response => {
+                    if (response.status === 200) {
+                        loginPage.style.display = "none";
+                        otpPage.style.display = "block";
+                    } else {
+                        alert("Invalid username or password");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+            otpForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const otp = otpInput.value;
+                const requestData = {
+                    otp: otp
+                };
+                fetch('http://127.0.0.1:5000/verify-otp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                })
+                .then(response => {
+                    if (response.status === 200) {
+                        otpPage.style.display = "none";
+                        homePage.style.display = "block";
+                    } else {
+                        alert("Invalid OTP");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
