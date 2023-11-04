@@ -6,7 +6,7 @@ Library             SeleniumLibrary
 
 *** Variables ***
 ${URL}          file:///D:/Project/ProjectAutomateTest/example-simple-form/app/index.html
-${BROWSER}      Chrome
+${BROWSER}      firefox
 
 
 *** Keywords ***
